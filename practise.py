@@ -95,3 +95,24 @@ for i in range(1,n+1):
         print("*",end="")
         
     print()
+
+
+
+a = input("enter:")#enter:abc-d
+a1 = list(a)
+print(a1)
+c = []
+for i in a1:
+    if i == "-":
+        v1 = a1.index(i)
+        special_chararcter = "-"
+    else:
+        c.append(i)
+
+v2 = "".join(c)
+v3 = v2[::-1]
+v4 = list(v3)
+v4.insert(v1,special_chararcter)
+print(v4)
+v4 = "".join(v4)
+print(v4)       # dcb-a
