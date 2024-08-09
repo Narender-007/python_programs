@@ -116,3 +116,29 @@ v4.insert(v1,special_chararcter)
 print(v4)
 v4 = "".join(v4)
 print(v4)       # dcb-a
+
+
+
+
+
+# interview question
+
+a = [1,2,3,4,11,12,13,21,22,23,31,41,42]
+
+# c = {(1,2,3,4):4,(11,12,13):3,(21,22,23):3,(31):1}
+
+dict_data = {}
+len_list = len(a)
+seq_list = []
+print(a[-1])
+for row in range(1,a[-1]+2):
+    # print(row)
+    if row in a:
+        seq_list.append(row)
+    else:
+        tuple_data = tuple(seq_list)
+        if len(seq_list)>0:
+            dict_data[tuple_data] = len(seq_list)
+        seq_list=[]
+    
+print(dict_data)
