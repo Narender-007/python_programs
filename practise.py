@@ -142,3 +142,64 @@ for row in range(1,a[-1]+2):
         seq_list=[]
     
 print(dict_data)
+
+
+# def fibonacci_series(n):
+    
+#     for i in range(n):
+#         v = n*i
+#         print(v)
+        
+#     return fibonacci_series(n-1)
+    
+# n = int("enter the numebr:")    
+# v = fibonacci_series(n)
+        
+# Design a Python class that acts as a simple key-value store with the following operations:
+ 
+# set(key, value): Sets the given key to the value.
+# get(key): Returns the value associated with the key, or None if the key doesn't exist.
+# delete(key): Deletes the key and its associated value.
+# Challenge: Implement the class ensuring efficient get, set, and delete operations.
+
+class A:
+    dict_data = {}
+    def __init__(self,name,age):
+        self.name = name
+        self.age = age
+        
+    
+    def set_method(self):
+        dict_data['name'] = self.name
+        dict_data['age'] = self.age
+        print("dictionary prepared")
+        
+    def get_method(self):
+        for key, value in dict_data.items():
+            if value == None:
+                pass
+            else:
+                print("without none values are printed")
+                print(dict_data[key])
+                
+    def delete_method(self,name):
+        if name:
+            dict_data.remove(name)
+            
+class_name = A("narender",28)
+m1 = class_name.set_method()
+m2 = class_anme.get_method()
+m3 = class_name.delete_method("narender")
+
+# Question: Implement a Flask application that serves an API endpoint /calculate which accepts POST requests with JSON data containing a list of integers. The endpoint should return the median of the integers in the list. If the list has an even number of integers, return the average of the two middle numbers.
+# Question:
+# Implement a Flask application with two endpoints:
+ 
+# /upload accepts a POST request with a file upload.
+
+from flask import Falsk, JsonResponse
+
+
+app = Flask(__name__)
+
+@app.post("")
