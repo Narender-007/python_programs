@@ -118,6 +118,61 @@ v4 = "".join(v4)
 print(v4)       # dcb-a
 
 
+# Problem Name is &&& Is Power of 10 &&& PLEASE DO NOT REMOVE THIS LINE.
+
+"""
+ Instructions to candidate.
+  1) Run this code in the REPL to observe its behaviour. The
+     execution entry point is main().
+  2) Consider adding some additional tests in doTestsPass().
+  3) Implement isPowerOf10() correctly.
+  4) If time permits, some possible follow-ups.
+"""
+
+def isPowerOf10(x):
+        """ Returns True if x is a power-of-10. Otherwise returns False. """
+        # todo: implement here
+        i = 1
+        if x > 1:
+            while i < x:
+                i *= 10
+        elif x > 0:
+            while i > x:
+                i /= 10.
+
+        if i == x:
+            return True
+        return False
+        
+
+def doTestsPass():
+        """ Returns True if all tests pass. Otherwise returns False. """
+        # todo: implement more tests, please
+        # feel free to make testing more elegant
+        doPass        = True
+        powersOf10    = [1,10,100,100000, .1, .001]
+        notPowersOf10 = [5,0,-10,20,110,10100,42]
+
+        for n in powersOf10:
+                if not isPowerOf10(n):
+                        print("Failed for " + str(n) + "\n")
+                        doPass = False
+
+
+        for n in notPowersOf10:
+                if isPowerOf10(n):
+                        print("Failed for " + str(n) + "\n")
+                        doPass = False
+
+        if doPass:
+                print("All tests pass\n")
+
+        return doPass
+
+
+if __name__ == "__main__":
+        doTestsPass()
+
 
 
 
